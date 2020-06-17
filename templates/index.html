@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>api</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body class="container">
+    <div class="row">
+      <h2 class="col-sm-9" style="text-align: center;">IOT Irrigators</h2>
+      <div class="col-sm-3">
+        <p style="text-align: right;">hello, {{user.username}}</p>
+        <p style="text-align: right;">
+          <a class="btn btn-warning" href="logout">logout</a>
+        </p>
+      </div>
+    </div>
+
+    <div><h3 style="color: rgb(95, 95, 95);">{{user.username}} data</h3></div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Motor run time</th>
+          <th>Moisture</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Date & Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in data %}
+        <tr>
+          <td>{{d.motorruntime}}</td>
+          <td>{{d.moisterlvl}}</td>
+          <td>{{d.temperature}}</td>
+          <td>{{d.humidity}}</td>
+          <td>{{d.date}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
