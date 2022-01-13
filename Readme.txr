@@ -1,0 +1,9 @@
+This project is above developing a cloud based Irrigation automation system that controls hardware models deployed on each field using API system built using DJANGO REST API FRAMEWORK.
+The data is stored in a POSTGRESQL DB and DJANGO ORM is used to communicate with the DB and server.
+This is deployed in HEROKU and can be tested.
+
+https://iotirrigator.herokuapp.com/
+TEST USER ID: Solocodey
+Password: 1234
+
+Feel free to create new user account.But the api data has to added Manually in the admin panel or should be collected from the hardware module.
